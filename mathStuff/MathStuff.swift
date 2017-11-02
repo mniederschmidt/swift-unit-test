@@ -1,9 +1,29 @@
-//
-//  MathStuff.swift
-//  mathStuff
-//
-//  Created by PLISKE, RYAN [AG-Contractor/1000] on 11/1/17.
-//  Copyright © 2017 tplisk. All rights reserved.
-//
-
 import Foundation
+
+func numberOfTwos(maxNumber: Int) -> Int {
+    var count = 0
+    for number in 0...maxNumber {
+        if String(number).contains("2") {
+            count += 1
+        }
+    }
+    return count
+}
+
+class Humanize {
+    func humanize(_ param: String?) -> String {
+        guard let unwrappedParamater = param else {
+            return ""
+        }
+        var copyOfParam = ""
+        for (index, char) in unwrappedParamater.enumerated() {
+            if index == 0 {
+                copyOfParam += String(char).capitalized
+            } else {
+                copyOfParam += String(char)
+            }
+            
+        }
+        return copyOfParam
+    }
+}

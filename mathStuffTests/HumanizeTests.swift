@@ -1,5 +1,5 @@
 import XCTest
-@testable import iOSTechExercises
+@testable import mathStuff
 
 class HumanizeTests: XCTestCase {
     let humanize = Humanize()
