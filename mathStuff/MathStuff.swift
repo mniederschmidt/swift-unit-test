@@ -15,14 +15,18 @@ class Humanize {
         guard let unwrappedParamater = param else {
             return ""
         }
+        
         var copyOfParam = ""
         for (index, char) in unwrappedParamater.enumerated() {
             if index == 0 {
                 copyOfParam += String(char).capitalized
             } else {
-                copyOfParam += String(char)
+                if String(char) == "_" {
+                    copyOfParam += " "
+                } else {
+                    copyOfParam += String(char)
+                }
             }
-            
         }
         return copyOfParam
     }
